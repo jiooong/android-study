@@ -2,18 +2,77 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview"
+        android:gravity="end"
+        android:hint="자연수를 입력해주세요"
+        android:maxLength="7"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        android:textColor="@color/purple"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.3"
+        />
+
+
     <TextView
+        android:id="@+id/centerInside"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="cm"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textview"
+        app:layout_constraintStart_toEndOf="@+id/textview"
+        android:layout_marginStart="16dp"></TextView>
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="m"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textview3"
+        app:layout_constraintStart_toEndOf="@+id/textview3"
+        android:layout_marginStart="16dp"></TextView>
+
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/textview"
+        app:layout_constraintStart_toStartOf="@+id/textview"
+        app:layout_constraintTop_toBottomOf="@+id/textview"
+        android:gravity="end"></TextView>
+
+    <ImageButton
+        android:id="@+id/snapButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/centerInside"
+        app:layout_constraintTop_toTopOf="@+id/centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/textview2"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/baseline_swap_vert_24"></ImageButton>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
